@@ -1,15 +1,18 @@
 import React, { Component } from 'react';
 import './StoreFront.css';
 import { connect } from 'react-redux';
-import { addToShoppingCart, getAllProducts } from '../../redux/reducer';
+import { addToShoppingCart, getAllProducts} from '../../redux/reducer';
+
 
 class StoreFront extends Component {
+    
 
     componentDidMount() {
         this.props.getAllProducts();
     }
 
     render() {
+    
         console.log(this.props.products);
         let productDisplay = this.props.products.map((element, index) => {
             return (
